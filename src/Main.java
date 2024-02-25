@@ -12,19 +12,21 @@ public class Main {
             }                                           //true degişkenini false yapıyoruz
         }else { //sayının negatif den pozıtıfe kadar ekleme işlemi ypaılacak
             System.out.print(number+" ");//son sayı degerını yazıyoruz - veya 0 dır
-            if (i>0) {//yukarda ne kadar sure ıslem tekrarladıysa sayaca kaydettık tekrar syısı kadar ekleme yapıcaz
+            if (i>0) {//yukarda ne kadar  ıslem tekrarladıysa sayaca kaydettık tekrar syısı kadar ekleme yapıcaz
                 i--;  // her işlemde saycı 1 eksıltecegız
                 return pattern(number + 5, false, i);//recuesive metodunu kosul saglandıgı surece cagırıryoruz
             }else {
-                return 0;   //sayac 0 olunca tekrar return 0 yapıyoruz kı metotu cagırmayalım donguden cıkalım
+                return 1;
+                //sayac 0 olunca tekrar return 0 yapıyoruz kı metotu cagırmayalım donguden cıkalım
             }
         }
+
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Lütfen Bir Değer Giriniz : ");
         int number = scan.nextInt();
-       System.out.println(pattern(number,true,0));
+        pattern(number,true,0);
 
     }
 }
